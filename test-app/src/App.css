@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.App {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  background-color: #ffffff;
+}
+
+.Titlebar {
+  text-align: center;
+  /* margin-bottom: 15px; */
+  z-index: 10;
+  box-shadow: 0px -1px 10px rgba(10, 10, 10, 0.2);
+  height: 6vh;
+}
+
+.AppLogo {
+  height: 6vmin;
+}
+
+.Storyboard {
+  height: 60vh;
+  padding: 20px;
+  display: flex;
+  gap: 40px;
+  /* background-color: #fafafa; */
+}
+
+.CanvasEditor {
+  height: 100%;
+  aspect-ratio: 1.5 / 1;
+  background-color: #dddddd;
+  border-radius: 10px;
+  position: relative;
+  /* width: calc(1.5 * height); */
+}
+
+.CanvasEditor canvas {
+  border-radius: 10px;
+}
+
+.CaptureBtn {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  height: 60px;
+  z-index: 2;
+}
+
+.MaximizeBtn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 40px;
+  z-index: 2;
+}
+
+.DeleteZone {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 280px;
+  z-index: 2;
+}
+
+.AssetGallery {
+  width: 40%;
+  text-align: left;
+}
+
+.AssetGallery h2 {
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.SceneGallery {
+  display: flex;
+  gap: 20px;
+}
+
+.SceneImg {
+  width: 240px;
+  aspect-ratio: 1.5 / 1;
+  border-radius: 10px;
+  box-shadow: 0px -1px 10px rgba(10, 10, 10, 0.2);
+}
+
+.SceneSelected {
+  opacity: 0.5;
+}
+
+.SceneImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.ObjectGallery {
+  display: flex;
+  gap: 30px
+}
+
+.ObjectImg {
+  width: 120px;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  box-shadow: 0px -1px 10px rgba(10, 10, 10, 0.2);
+
+}
+
+.ObjectImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.Editor {
+  background-color: #614bc3;
+  height: 30vh;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  bottom: 0px;
+  align-items: center;
+  justify-content: right;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.TimelineControls {
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 5%;
+}
+
+.PlayButton {
+  width: 80%;
+}
+
+.PauseButton {
+  width: 60%;
+}
+
+.DownloadButton {
+  width: 60%;
+}
+
+.Timeline {
+  background-color: #725ADE;
+  border-radius: 10px;
+  /* margin: 15px; */
+  /* height: 95%; */
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: left; */
+  box-sizing: border-box;
+  padding: 20px;
+  /* justify-content: space-between; */
+}
+
+.TimelineTicks {
+  display: flex;
+  position: relative;
+  justify-content: 100px;
+  height: 15px;
+  /* padding-left: 40px; */
+}
+
+.TimelineLabels {
+  position: relative;
+  /* display: flex; */
+  /* font-size: 12px; */
+  width: 100%;
+  height: 20px;
+  margin-top: 5px;
+  /* justify-content: flex-start;
+  text-align: center;
+  padding-left: 40px; */
+}
+
+.Tick {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 40px; */
+}
+
+.TickLine {
+  width: 2px;
+  height: 10px;
+  background-color: #ffffffaa;
+}
+
+.TickLineSmall {
+  width: 2px;
+  height: 10px;
+  background-color: #ffffff;
+}
+
+.TickLabel {
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  position: absolute;
+  transform: translateX(-50%);
+  /* margin-top: 4px; */
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/cartoonimator-ojje/static/css/main.8dd6301e.css",
+    "main.js": "/cartoonimator-ojje/static/js/main.54030162.js",
+    "static/js/453.b9b4a01c.chunk.js": "/cartoonimator-ojje/static/js/453.b9b4a01c.chunk.js",
+    "static/media/logo-full.svg": "/cartoonimator-ojje/static/media/logo-full.25cd2785a5153424ae4bf626bcbaa77f.svg",
+    "static/media/scene1.jpg": "/cartoonimator-ojje/static/media/scene1.c84430fc6799665b9f0b.jpg",
+    "static/media/scene3.jpg": "/cartoonimator-ojje/static/media/scene3.9b8260db6f7a26f71f02.jpg",
+    "static/media/obj3.png": "/cartoonimator-ojje/static/media/obj3.9e016cfa8819748f610b.png",
+    "static/media/obj2.png": "/cartoonimator-ojje/static/media/obj2.52606415ca2c838bca14.png",
+    "static/media/obj1.png": "/cartoonimator-ojje/static/media/obj1.75ba9e5f38742ad228dd.png",
+    "static/media/obj4.png": "/cartoonimator-ojje/static/media/obj4.0bb8ba7a358e2395566c.png",
+    "static/media/scene2.jpg": "/cartoonimator-ojje/static/media/scene2.454d7450d883c62409a3.jpg",
+    "static/media/capture-button.svg": "/cartoonimator-ojje/static/media/capture-button.33cc6d4cc2d1b64e6d87408e7ec1cf93.svg",
+    "static/media/delete-zone.svg": "/cartoonimator-ojje/static/media/delete-zone.9841533ca50c9d535b27fd8134159f04.svg",
+    "index.html": "/cartoonimator-ojje/index.html",
+    "static/media/fullscreen-button.svg": "/cartoonimator-ojje/static/media/fullscreen-button.c679d6c6849e999abf0458ae59f1023a.svg",
+    "static/media/download-circle.svg": "/cartoonimator-ojje/static/media/download-circle.5ce9b4df4aeafa970dbab7fa922a1f7c.svg",
+    "static/media/pause-circle.svg": "/cartoonimator-ojje/static/media/pause-circle.941f2789cac14aec2bdc1d26172df4c7.svg",
+    "static/media/play-circle.svg": "/cartoonimator-ojje/static/media/play-circle.766d6f494d18c7b97d3821a87d00a318.svg",
+    "main.8dd6301e.css.map": "/cartoonimator-ojje/static/css/main.8dd6301e.css.map",
+    "main.54030162.js.map": "/cartoonimator-ojje/static/js/main.54030162.js.map",
+    "453.b9b4a01c.chunk.js.map": "/cartoonimator-ojje/static/js/453.b9b4a01c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8dd6301e.css",
+    "static/js/main.54030162.js"
+  ]
+}

@@ -11,11 +11,17 @@ import CanvasEditor from "./Canvas";
 import './App.css';
 
 export default function App() {
+  const [keyframes, setKeyframes] = useState([]);
+  console.log(`Keyframes:`);
+  console.log(keyframes);
+
+  const [mode, setMode] = useState("edit");
+
   return (
     <div className="App">
       <Titlebar />
-      <Storyboard />
-      <Editor />
+      <Storyboard mode={mode} setMode={setMode} keyframes={keyframes} setKeyframes={setKeyframes}/>
+      <Editor setMode={setMode} keyframes={keyframes}/>
     </div>
   );
 }
@@ -32,18 +38,18 @@ const Titlebar = () => {
   )
 }
 
-const Storyboard = () => {
+const Storyboard = ({ mode, setMode, keyframes, setKeyframes }) => {
   const [selectedScene, setSelectedScene] = useState(null);
-
+  console.log(`Mode: ${mode}`)
   return (
     <div className='Storyboard'>
-      <CanvasEditor scene={selectedScene} />
+      <CanvasEditor mode={mode} setMode={setMode} scene={selectedScene} keyframes={keyframes} setKeyframes={setKeyframes}/>
       <AssetGallery selectedScene={selectedScene} onSelectScene={setSelectedScene} />
     </div>
   )
 }
 
-const AssetGallery = ({ selectedScene, onSelectScene, onDragObject }) => {
+const AssetGallery = ({ selectedScene, onSelectScene }) => {
   const handleClick = (image) => {
     if (selectedScene === image ) {
       onSelectScene(null);
@@ -91,7 +97,7 @@ const AssetGallery = ({ selectedScene, onSelectScene, onDragObject }) => {
   )
 }
 
-const Editor = () => {
+const Editor = ({ setMode, keyframes }) => {
   return (
     <div className='Editor'>
       <div className='TimelineControls'>
@@ -99,11 +105,13 @@ const Editor = () => {
           className='PlayButton'
           src={play}
           alt='Play button'
+          onClick={() => setMode("play")}
         />
         <img
           className='PauseButton'
           src={pause}
           alt='Pause button'
+          onClick={() => setMode("edit")}
         />
         <img
           className='DownloadButton'
@@ -111,12 +119,12 @@ const Editor = () => {
           alt='Download button'
         />
       </div>
-      <Timeline />
+      <Timeline keyframes={keyframes} />
     </div>
   )
 }
 
-const Timeline = ({totalTicks = 59, tickSpacing = 30, labelEvery = 10}) => {
+const Timeline = ({totalTicks = 59, tickSpacing = 30, labelEvery = 10, keyframes}) => {
   return (
     <div className="Timeline">
       {/* Ticks container */}
@@ -142,6 +150,12 @@ const Timeline = ({totalTicks = 59, tickSpacing = 30, labelEvery = 10}) => {
           >
             {i * labelEvery / 10}s
           </div>
+        ))}
+      </div>
+
+      <div className="KeyframeContainer">
+        {keyframes.map((img, index) => (
+          <img key={index} src={img.url} alt={`Keyframe ${index}`} className="KeyframeImage" />
         ))}
       </div>
     </div>
